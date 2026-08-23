@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#5f526f">
+  <title>El llibre màgic de la Sibil·la i en Ponç Hug</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <header class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Hi havia una vegada...</p>
+      <h1>El llibre màgic de<br><span>la Sibil·la i en Ponç Hug</span></h1>
+      <p class="intro">Un racó dolç per compartir contes, cançons i somnis.</p>
+      <nav class="hero-actions" aria-label="Anar a una secció">
+        <a class="magic-button primary" href="#conte">Obrir el conte</a>
+        <a class="magic-button secondary" href="#cancons">Escoltar cançons</a>
+      </nav>
+    </div>
+    <button class="cover-card" id="openStoryTop" type="button" aria-label="Obrir La gran aventura de la Nyicris">
+      <img src="assets/pages/page-01.webp" alt="Portada de La gran aventura de la Nyicris">
+      <span>Obre'm ✦</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="story-section" id="conte">
+      <div class="section-heading">
+        <span class="section-icon" aria-hidden="true">✦</span>
+        <div><p>El conte d'avui</p><h2>La gran aventura de la Nyicris</h2></div>
+      </div>
+      <div class="story-intro">
+        <img src="assets/pages/page-01.webp" alt="La Nyicris enfilada a un arbre, portada del conte">
+        <div>
+          <p>La Nyicris veu una papallona, fa un salt massa valent i acaba dalt d'un arbre. Per sort, l'Anna, l'Aran i un equip de bombers no la deixaran sola.</p>
+          <p class="meta">10 pàgines · De l'Anna de Berga</p>
+          <button class="magic-button primary" id="openStory" type="button">Començar a llegir</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="songs-section" id="cancons">
+      <div class="section-heading">
+        <span class="section-icon" aria-hidden="true">♫</span>
+        <div><p>El nostre cançoner</p><h2>Cançons per cantar i somiar</h2></div>
+      </div>
+      <div class="song-list" id="songList"></div>
+    </section>
+  </main>
+
+  <footer><span>✦</span> Fet amb amor per a la Sibil·la i en Ponç Hug <span>✦</span></footer>
+
+  <dialog class="reader" id="reader">
+    <div class="reader-shell">
+      <header class="reader-header">
+        <div><strong>La gran aventura de la Nyicris</strong><span id="pageCounter">Portada</span></div>
+        <div class="reader-tools">
+          <button id="speakPage" class="icon-button" type="button" aria-label="Escoltar aquesta pàgina" title="Escoltar aquesta pàgina">🔊</button>
+          <button id="closeStory" class="icon-button" type="button" aria-label="Tancar el conte" title="Tancar">×</button>
+        </div>
+      </header>
+      <div class="page-stage"><img id="storyPage" alt=""></div>
+      <nav class="page-controls" aria-label="Controls del conte">
+        <button id="prevPage" type="button">← Enrere</button>
+        <div class="page-dots" id="pageDots" aria-hidden="true"></div>
+        <button id="nextPage" type="button">Endavant →</button>
+      </nav>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
